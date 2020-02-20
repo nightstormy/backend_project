@@ -29,6 +29,7 @@ class UserController extends Controller
     }
 
     /**
+     * 
      * Register api
      *
      * @return \Illuminate\Http\Response
