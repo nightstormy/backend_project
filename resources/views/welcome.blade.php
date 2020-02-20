@@ -81,7 +81,7 @@
 
             <div class="content">
                 <div class="title m-b-md">
-                    Laravel m2-project passport auth
+                    Laravel m2-project passport auth prueba
                 </div>
             </div>
         </div>

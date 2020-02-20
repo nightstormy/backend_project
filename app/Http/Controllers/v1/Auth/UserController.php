@@ -34,8 +34,7 @@ class UserController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function register(Request $request)
-    
+    public function register(Request $request)    
     {
         $validator = Validator::make($request->all(), [
             'name' => 'required',
