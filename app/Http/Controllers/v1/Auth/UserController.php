@@ -54,7 +54,7 @@ class UserController extends Controller
     }
 
     /**
-     * details api
+     * detalles api
      *
      * @return \Illuminate\Http\Response
      */
@@ -62,6 +62,16 @@ class UserController extends Controller
     {
         $user = Auth::user();
         return response()->json(['success' => $user], $this->successStatus);
+    }
+    
+    /**
+     * details api
+     *
+     * @return \Illuminate\Http\Response
+     */
+    public function prueba()
+    {
+        return response()->json($this->successStatus);
     }
 
 }

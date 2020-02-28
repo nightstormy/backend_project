@@ -23,3 +23,5 @@ Route::prefix('/v1')->name('v1.')->namespace('v1\Auth')->group(function () {
         Route::post('details', 'UserController@details')->name('details');
     });
 });
+
+Route::get('prueba', 'UserController@prueba')->('prueba')
