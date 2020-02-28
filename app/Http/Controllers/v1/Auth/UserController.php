@@ -71,7 +71,7 @@ class UserController extends Controller
      */
     public function prueba()
     {
-        return response()->toJson($this->successStatus);
+        return response()->json($this->successStatus);
     }
 
 }
