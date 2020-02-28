@@ -15,7 +15,7 @@
 return $request->user();
 }); */
 
-Route::prefix('/v1')->name('v1.')->namespace('v1\Auth')->group(function () {
+Route::prefix('v1')->name('v1.')->namespace('v1\Auth')->group(function () {
     Route::post('/login', 'UserController@login')->name('login');
     Route::post('/register', 'UserController@register')->name('register');
     Route::get('/prueba', 'UserController@prueba')->name('prueba');
