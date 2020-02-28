@@ -81,7 +81,8 @@
 
             <div class="content">
                 <div class="title m-b-md">
-                    Laravel m2-project passport auth prueba
+                    {{-- Laravel m2-project passport auth prueba --}}
+                <a class="btn btn-outline-primary" href="{{ route('v1.prueba') }}">prueba</a>
                 </div>
             </div>
         </div>
