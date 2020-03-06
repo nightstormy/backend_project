@@ -36,6 +36,9 @@ class UserController extends Controller
      */
     public function register(Request $request)
     {
+
+        dd(request()->all());
+
         $validator = Validator::make($request->all(), [
             'name' => 'required',
             'email' => 'required|email',
@@ -43,7 +46,6 @@ class UserController extends Controller
             'c_password' => 'required|same:password',
         ]);
 
-        dd(request()->all());
         if ($validator->fails()) {
             return response()->json(['error' => $validator->errors()], 401);
         }
