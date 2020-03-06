@@ -29,12 +29,12 @@ class UserController extends Controller
     }
 
     /**
-     * 
+     *
      * Register api
      *
      * @return \Illuminate\Http\Response
      */
-    public function register(Request $request)    
+    public function register(Request $request)
     {
         $validator = Validator::make($request->all(), [
             'name' => 'required',
@@ -42,6 +42,8 @@ class UserController extends Controller
             'password' => 'required',
             'c_password' => 'required|same:password',
         ]);
+
+        dd(request()->all());
         if ($validator->fails()) {
             return response()->json(['error' => $validator->errors()], 401);
         }
@@ -63,7 +65,7 @@ class UserController extends Controller
         $user = Auth::user();
         return response()->json(['success' => $user], $this->successStatus);
     }
-    
+
     /**
      * details api
      *
@@ -73,5 +75,4 @@ class UserController extends Controller
     {
         return response()->json($this->successStatus);
     }
-
 }
