@@ -37,7 +37,8 @@ class UserController extends Controller
     public function register(Request $request)
     {
 
-        dd(request()->all());
+        $test = dd(request()->all());
+        return response()->json($test);
 
         $validator = Validator::make($request->all(), [
             'name' => 'required',
